@@ -1,3 +1,5 @@
+
+/////////// find
 let arr1 = [1,2,3,4,500]
 function find(arr,func){
    for(let item of arr){
