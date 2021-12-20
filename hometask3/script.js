@@ -7,7 +7,7 @@ if(parseInt(x)){
         count+=x%10
         x=Math.floor(x/10)
     }
-    if(parseInt(count)==z){
+    if(Number(count)==z){
         return (`Palindrome,reverse value is <strong style="color:red">${Number(count)}</strong>`)
     } else return(`Not palindrome, reverse value is <strong style="color:red">${Number(count)}</strong>`)
    
