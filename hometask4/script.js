@@ -7,6 +7,7 @@ let cords = field.getBoundingClientRect();
     let left=(event.clientX-cords.left-ball.offsetWidth/2-field.clientLeft); 
     ball.style.top=top+"px"
     ball.style.left=left+"px"
+    
     if(parseInt(ball.style.top)<0){
         ball.style.top=0+"px"
     }
@@ -30,24 +31,28 @@ document.addEventListener("keydown",(event)=>{
             if(parseInt(ball.style.left)>(field.clientWidth-ball.offsetWidth)){
                 ball.style.left=(field.clientWidth-ball.offsetHeight)+"px"
             }
+            ball.style.transform="rotate(180deg)"
             break;
         case "ArrowUp":
             ball.style.top=parseInt(ball.style.top)-100+"px";
             if(parseInt(ball.style.top)<0){
                 ball.style.top=0+"px"
             }
+            ball.style.transform="rotate(-180deg)"
             break;
         case "ArrowLeft":
             ball.style.left=parseInt(ball.style.left)-100+"px";
             if(parseInt(ball.style.left)<0){
                 ball.style.left=0+"px"
             }
+            ball.style.transform="rotate(-180deg)"
             break;
         case "ArrowDown":
             ball.style.top=parseInt(ball.style.top)+100+"px";
             if(parseInt(ball.style.top)>(field.clientHeight-ball.offsetHeight)){
                 ball.style.top=(field.clientHeight-ball.offsetHeight)+"px"
             }
+            ball.style.transform="rotate(180deg)"
             break;
     }
 })
